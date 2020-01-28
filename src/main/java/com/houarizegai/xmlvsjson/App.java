@@ -1,4 +1,4 @@
-package com.houarizegai.jsonvsxml;
+package com.houarizegai.xmlvsjson;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
