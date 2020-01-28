@@ -1,0 +1,54 @@
+* {
+    -fx-font-family: Tahoma;
+}
+
+.title {
+    -fx-font-size: 28px;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, #2196f3 50%)
+}
+
+.title2 {
+    -fx-font-size: 20px;
+    -fx-text-fill: #2196f3
+}
+
+.area {
+    -fx-font-size: 18px;
+}
+
+.btn, .btn2 {
+    -fx-pref-width: 110px;
+    -fx-pref-height: 35px;
+    -fx-font-size: 18px;
+    -fx-background-color: #999;
+    -fx-background-radius: 15 0;
+    -fx-text-fill: #FFF;
+    -jfx-button-type: RAISED;
+    -fx-cursor: hand
+}
+
+.btn2 {
+    -fx-background-radius: 5;
+}
+
+.btn-primary {
+    -fx-background-color: #ff3050;
+}
+
+.btn-success {
+    -fx-background-color: #999;
+}
+
+.btn-warning {
+    -fx-background-color: #ffc500;
+}
+
+.lbl-title {
+    -fx-font-size: 18px;
+    -fx-text-fill: #ff3050
+}
+
+.lbl {
+    -fx-font-size: 15px;
+    -fx-text-fill: #2196f3
+}

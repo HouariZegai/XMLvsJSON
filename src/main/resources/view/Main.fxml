@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+
+<VBox alignment="TOP_CENTER" spacing="20.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.houarizegai.jsonvsxml.controller.MainController">
+   <children>
+      <Label styleClass="title" text="XML vs JSON" />
+      <HBox spacing="40.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" spacing="5.0">
+               <children>
+                  <StackPane>
+                     <children>
+                        <Label styleClass="title2" text="XML" StackPane.alignment="CENTER_LEFT" />
+                        <JFXButton onAction="#onLoadXML" text="Load" StackPane.alignment="CENTER_RIGHT">
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="btn-primary" />
+                           </styleClass>
+                        </JFXButton>
+                     </children>
+                  </StackPane>
+                  <TextArea fx:id="areaXML" editable="false" prefHeight="350.0" prefWidth="275.0" promptText="XML Data" styleClass="area" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" spacing="20.0">
+               <children>
+                  <Label styleClass="title2" text="Statistics" />
+                  <JFXButton onAction="#onCalculate" text="Calculate">
+                     <styleClass>
+                        <String fx:value="btn2" />
+                        <String fx:value="btn-warning" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label styleClass="lbl-title" text="Parsing Time" />
+                        <TextFlow>
+                           <children>
+                              <Label styleClass="lbl" text="XML: " />
+                              <Label fx:id="lblTimeXML" styleClass="lbl2" text="0 ms" />
+                           </children>
+                        </TextFlow>
+                        <TextFlow>
+                           <children>
+                              <Label styleClass="lbl" text="JSON: " />
+                              <Label fx:id="lblTimeJSON" styleClass="lbl2" text="0 ms" />
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label styleClass="lbl-title" text="Number of lines" />
+                        <TextFlow>
+                           <children>
+                              <Label styleClass="lbl" text="XML: " />
+                              <Label fx:id="lblNbrLinesXML" styleClass="lbl2" text="0" />
+                           </children>
+                        </TextFlow>
+                        <TextFlow>
+                           <children>
+                              <Label styleClass="lbl" text="JSON: " />
+                              <Label fx:id="lblNbrLinesJSON" styleClass="lbl2" text="0" />
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" spacing="5.0">
+               <children>
+                  <StackPane>
+                     <children>
+                        <Label styleClass="title2" text="JSON" StackPane.alignment="CENTER_LEFT" />
+                        <JFXButton onAction="#onLoadJSON" text="Load" StackPane.alignment="CENTER_RIGHT">
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="btn-primary" />
+                           </styleClass>
+                        </JFXButton>
+                     </children>
+                  </StackPane>
+                  <TextArea fx:id="areaJSON" editable="false" prefHeight="350.0" prefWidth="275.0" promptText="JSON Data" styleClass="area" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox spacing="5.0">
+         <children>
+            <Label styleClass="title2" text="Log" />
+            <TextArea fx:id="areaLog" editable="false" prefHeight="130.0" />
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
