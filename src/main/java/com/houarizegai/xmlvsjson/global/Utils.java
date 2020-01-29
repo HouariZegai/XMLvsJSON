@@ -20,6 +20,10 @@ public class Utils {
         return lines;
     }
 
+    public static String readStringFromFile(String pathName) {
+        return readStringFromFile(new File(pathName));
+    }
+
     public static String readStringFromFile(File file) { // Read file and convert it to String
         try {
             StringBuilder fileContents = new StringBuilder((int) file.length());

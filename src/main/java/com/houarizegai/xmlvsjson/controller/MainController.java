@@ -20,7 +20,7 @@ public class MainController implements Initializable {
     private TextArea areaXML, areaJSON, areaLog;
 
     @FXML
-    private Label lblTimeXML, lblTimeJSON, lblNbrLinesXML, lblNbrLinesJSON;
+    private Label lblTimeXML, lblTimeJSON, lblLengthXMLData, lblLengthJSONData;
 
     private FileChooser fileChooserXML, fileChooserJSON;
 
@@ -58,18 +58,18 @@ public class MainController implements Initializable {
     private void onCalculate() {
         areaLog.setText(null);
 
-        lblNbrLinesXML.setText(String.valueOf(Utils.getNumberOfLinesInFile(String.valueOf(xmlFile))));
-        lblNbrLinesJSON.setText(String.valueOf(Utils.getNumberOfLinesInFile(String.valueOf(jsonFile))));
+        lblLengthXMLData.setText(Utils.readStringFromFile(xmlFile).length() + " Char");
+        lblLengthJSONData.setText(Utils.readStringFromFile(jsonFile).length() + " Char");
 
         if(xmlFile != null) {
             long currentTime = System.currentTimeMillis();
-            areaLog.appendText(String.valueOf(XMLParserSAX.parseXML(String.valueOf(xmlFile))));
+            areaLog.appendText("XML Parsing result:\n" + XMLParserSAX.parseXML(String.valueOf(xmlFile)));
             lblTimeXML.setText(System.currentTimeMillis() - currentTime + " ms");
         }
 
         if(jsonFile != null) {
             long currentTime = System.currentTimeMillis();
-            areaLog.appendText(String.valueOf(JSONParser.parseJSON(String.valueOf(jsonFile))));
+            areaLog.appendText("JSON Parsing result:\n" + JSONParser.parseJSON(String.valueOf(jsonFile)));
             lblTimeJSON.setText(System.currentTimeMillis() - currentTime + " ms");
         }
     }

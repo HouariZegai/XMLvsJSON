@@ -2,10 +2,21 @@ package com.houarizegai.xmlvsjson.engine.model;
 
 public class Employee {
     private int id;
+    private int age;
     private String name;
     private String gender;
-    private int age;
     private String role;
+
+    public Employee() {
+    }
+
+    public Employee(int id, int age, String name, String gender, String role) {
+        this.id = id;
+        this.age = age;
+        this.name = name;
+        this.gender = gender;
+        this.role = role;
+    }
 
     public int getId() {
         return id;
@@ -50,6 +61,6 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee:: ID=" + this.id + " Name=" + this.name + " Age=" + this.age + " Gender=" + this.gender +
-                " Role=" + this.role;
+                " Role=" + this.role + "\n";
     }
 }

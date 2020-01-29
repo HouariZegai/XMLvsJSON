@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.TextFlow?>
 
-
 <VBox alignment="TOP_CENTER" spacing="20.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.houarizegai.xmlvsjson.controller.MainController">
    <children>
       <Label styleClass="title" text="XML vs JSON" />
@@ -32,7 +31,7 @@
                   <TextArea fx:id="areaXML" editable="false" prefHeight="350.0" prefWidth="275.0" promptText="XML Data" styleClass="area" />
                </children>
             </VBox>
-            <VBox alignment="TOP_CENTER" spacing="20.0">
+            <VBox alignment="TOP_CENTER" prefWidth="180.0" spacing="20.0">
                <children>
                   <Label styleClass="title2" text="Statistics" />
                   <JFXButton onAction="#onCalculate" text="Calculate">
@@ -63,17 +62,17 @@
                   </VBox>
                   <VBox spacing="10.0">
                      <children>
-                        <Label styleClass="lbl-title" text="Number of lines" />
+                        <Label styleClass="lbl-title" text="Data Size" />
                         <TextFlow>
                            <children>
                               <Label styleClass="lbl" text="XML: " />
-                              <Label fx:id="lblNbrLinesXML" styleClass="lbl2" text="0" />
+                              <Label fx:id="lblLengthXMLData" styleClass="lbl2" text="0" />
                            </children>
                         </TextFlow>
                         <TextFlow>
                            <children>
                               <Label styleClass="lbl" text="JSON: " />
-                              <Label fx:id="lblNbrLinesJSON" styleClass="lbl2" text="0" />
+                              <Label fx:id="lblLengthJSONData" styleClass="lbl2" text="0" />
                            </children>
                         </TextFlow>
                      </children>
@@ -101,7 +100,7 @@
       <VBox spacing="5.0">
          <children>
             <Label styleClass="title2" text="Log" />
-            <TextArea fx:id="areaLog" editable="false" prefHeight="130.0" />
+            <TextArea fx:id="areaLog" editable="false" prefHeight="130.0" styleClass="area" />
          </children>
       </VBox>
    </children>
