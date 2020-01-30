@@ -5,6 +5,12 @@ Desktop App demonstrate the comparison between XML and JSON by data size & parsi
 ![java 8 badge](https://img.shields.io/badge/Java-8-red.svg)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)
 
+## Features
+- [x] Easy to use
+- [x] Deserialize XML to object list
+- [x] Deserialize JSON to object list
+- [x] Calculate the parsing time (for comparison)
+
 ## Screenshots
 | Main App |
 |:-----------:|
